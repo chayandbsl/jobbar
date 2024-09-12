@@ -17,7 +17,9 @@ class JobFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'title' => fake()->realText(),
+            'comapany_name' => fake()->company(),
+            'employment_type' => fake()->randomElement(['full_time', 'part_time', 'contract', 'internship']),
         ];
     }
 }

@@ -13,6 +13,14 @@ return new class extends Migration
     {
         Schema::create('jobs', function (Blueprint $table) {
             $table->id();
+            $table->string('title', 200);
+            $table->string('employment_type', 50);
+            $table->string('company_name', 100);
+            $table->string('role', 100);
+            $table->string('apply_url');
+            $table->string('company_logo');
+            $table->text('description');
+            $table->string('salary', 20);
             $table->timestamps();
         });
     }
